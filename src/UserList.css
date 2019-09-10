@@ -1,0 +1,42 @@
+th {
+    text-transform: capitalize;
+    color: rgba(0,0,0,0.5);
+}
+
+th, td {
+    width: auto;
+    text-align: left;
+    padding: 1em 2em 1em 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    color: rgba(0,0,0,0.8);
+}
+
+tbody td {
+    border-top: 1px solid rgba(33, 150, 243, 0.5);
+}
+
+.user-list {
+    margin: 2rem;
+    overflow: hidden;
+    border-radius: 6px;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+    background: #ffffff;
+}
+
+h2 {
+    padding: 2rem;
+    margin: 0;
+}
+
+td:first-of-type,
+th:first-of-type {
+    padding-left: 2rem;
+}
+
+tr:hover td {
+    background-color: rgba(33, 150, 243, 0.1);
+}

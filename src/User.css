@@ -1,0 +1,11 @@
+img {
+    max-width: 40px;
+    border-radius: 100%;
+    border: 2px solid rgb(211, 226, 239);
+    vertical-align: middle;
+}
+
+.full-name {
+    white-space: nowrap;
+    text-transform: capitalize;
+}
