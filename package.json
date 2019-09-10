@@ -1,6 +1,6 @@
 {
-  "name": "userList",
-  "homepage": "https://pckltr.github.io/userList/",
+  "name": "user-list",
+  "homepage": "https://pckltr.github.io/user-list/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
