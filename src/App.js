@@ -6,7 +6,7 @@ export default class App extends Component {
   state = {
     hasError: false,
     hasData: false,
-    users: []
+    data: []
   };
 
   fetchData = () => {
@@ -29,7 +29,7 @@ export default class App extends Component {
         values.forEach(res =>
           res
             .json()
-            .then(res => this.setState({ users: [...this.state.users, res] }))
+            .then(res => this.setState({ data: [...this.state.data, res] }))
             .catch(() => this.setState({ hasError: true }))
         )
       )
@@ -41,11 +41,23 @@ export default class App extends Component {
   }
 
   render() {
-    const { users, hasData, hasError } = this.state;
+    const { data, hasData, hasError } = this.state;
+    const model = [
+        "userId",
+        "picture",
+        "lastName",
+        "firstName",
+        "login",
+        "password",
+        "title",
+        "gender",
+        "email",
+        "address"
+    ];
     return hasError ? (
       <div className="status">Error loading data!</div>
     ) : hasData ? (
-      <UserList users={users} />
+      <UserList data={data} model={model} title={"User List"} className={"user-list"} />
     ) : (
       <div className="status">Loading users...</div>
     );

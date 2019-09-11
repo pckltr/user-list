@@ -4,26 +4,19 @@ import User from "./User";
 
 export default class UserList extends Component {
   render() {
-    const { users } = this.props;
+    const { data, title, model, className } = this.props;
     return (
-      <div className="user-list">
-        <h2>User List</h2>
+      <div className={className}>
+        <h2>{title}</h2>
         <table>
           <thead>
             <tr>
-              <th>id</th>
-              <th>user</th>
-              <th>title</th>
-              <th>user name</th>
-              <th>password</th>
-              <th>gender</th>
-              <th>email</th>
-              <th>address</th>
+                {model.map((item, index) => <th key={index}>{item}</th>)}
             </tr>
           </thead>
           <tbody>
-            {users.map((user, index) => (
-              <User key={index} userData={user} />
+            {data.map((item, index) => (
+              <User key={index} data={item} model={model}/>
             ))}
           </tbody>
         </table>

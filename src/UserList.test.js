@@ -24,8 +24,20 @@ const users = [{
   email: "abigail.foster60@example.com",
   picture: "https://randomuser.me/api/portraits/women/10.jpg",
   address: "1851 saddle dr anna 69319"
-}]
+}];
+const model = [
+    "userId",
+    "picture",
+    "lastName",
+    "firstName",
+    "login",
+    "password",
+    "title",
+    "gender",
+    "email",
+    "address"
+];
 
 it('renders without crashing', () => {
-  shallow(<UserList users={users}/>);
+  shallow(<UserList data={users} model={model} title={"User List"} className={"user-list"} />);
 });
